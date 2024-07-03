@@ -1,0 +1,11 @@
+Prescaler: The TIM2 clock is divided by (Prescaler + 1).
+Prescaler = 999 means the clock is divided by 1000.
+
+Period: The timer counts from 0 to (Period - 1).
+Period = 7199 means the timer counts up to 7199.
+
+Frequency: For a clock frequency of 72 MHz:
+Timer frequency = Clock frequency / (Prescaler + 1) = 72,000,000 / 1000 = 72,000 Hz.
+Timer period = (Period + 1) / Timer frequency = 7200 / 72,000 = 0.1 seconds (100 ms).
+
+This means the timer interrupt will occur every 100 ms, toggling the LEDs at a rate of 10 Hz.
